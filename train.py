@@ -39,7 +39,8 @@ filter_type = "dual_random_walk"
 epochs = 100
 lr = 0.01
 weight_decay = 0.0
-epsilon = 1e-08
+epsilon = 1.0e-3
+amsgard = True
 lr_decay_ratio = 0.1
 lr_decay_steps = [20, 30, 40, 50]
 max_grad_norm = 5
@@ -98,7 +99,11 @@ model = DCRNNModel(adj_mx,
 #                     output_dim,
 #                     filter_type).to(device)
 
-optimizer = torch.optim.Adam(model.parameters(), lr=lr, eps=epsilon, weight_decay=weight_decay)
+optimizer = torch.optim.Adam(model.parameters(), 
+                             lr=lr, eps=epsilon, 
+                             weight_decay=weight_decay, 
+                             amsgard=amsgard)
+
 lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, 
                                                     milestones=lr_decay_steps, 
                                                     gamma=lr_decay_ratio)

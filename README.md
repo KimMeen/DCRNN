@@ -46,41 +46,43 @@ Run multi-step testing on trained model from horizon 1 to 12:
 python multi_step_test.py
 ```
 
+P.S. Single-step testing evaluate on `y_true[:, horizon_i, :, :] ` and `y_pred[:, horizon_i, :, :]` while multi-step testing based on `y_true[:, :horizon_i, :, :] ` and `y_pred[:, :horizon_i, :, :]` 
+
 ## Results
 
-Single-step testing results on 10 epochs:
+Single-step testing results on 80 epochs:
 
 ```
 --------single-step testing results--------
-Horizon 01, MAE: 2.43, MAPE: 0.0580, RMSE: 4.21
-Horizon 02, MAE: 2.83, MAPE: 0.0700, RMSE: 5.26
-Horizon 03, MAE: 3.15, MAPE: 0.0800, RMSE: 6.04
-Horizon 04, MAE: 3.41, MAPE: 0.0887, RMSE: 6.67
-Horizon 05, MAE: 3.67, MAPE: 0.0967, RMSE: 7.23
-Horizon 06, MAE: 3.91, MAPE: 0.1044, RMSE: 7.75
-Horizon 07, MAE: 4.15, MAPE: 0.1117, RMSE: 8.22
-Horizon 08, MAE: 4.37, MAPE: 0.1188, RMSE: 8.66
-Horizon 09, MAE: 4.59, MAPE: 0.1255, RMSE: 9.08
-Horizon 10, MAE: 4.80, MAPE: 0.1320, RMSE: 9.47
-Horizon 11, MAE: 5.00, MAPE: 0.1383, RMSE: 9.83
-Horizon 12, MAE: 5.20, MAPE: 0.1446, RMSE: 10.18
+Horizon 01, MAE: 2.21, MAPE: 0.0526, RMSE: 3.80
+Horizon 02, MAE: 2.51, MAPE: 0.0624, RMSE: 4.64
+Horizon 03, MAE: 2.71, MAPE: 0.0698, RMSE: 5.21
+Horizon 04, MAE: 2.88, MAPE: 0.0760, RMSE: 5.68
+Horizon 05, MAE: 3.02, MAPE: 0.0813, RMSE: 6.04
+Horizon 06, MAE: 3.14, MAPE: 0.0861, RMSE: 6.35
+Horizon 07, MAE: 3.25, MAPE: 0.0903, RMSE: 6.62
+Horizon 08, MAE: 3.34, MAPE: 0.0941, RMSE: 6.86
+Horizon 09, MAE: 3.43, MAPE: 0.0976, RMSE: 7.07
+Horizon 10, MAE: 3.51, MAPE: 0.1009, RMSE: 7.26
+Horizon 11, MAE: 3.59, MAPE: 0.1039, RMSE: 7.44
+Horizon 12, MAE: 3.66, MAPE: 0.1069, RMSE: 7.61
 ```
 
-Multi-step forecasting on 10 epochs:
+Multi-step forecasting on 80 epochs:
 
 ```
 --------multi-step testing results--------
-Horizon 01, MAE: 2.43, MAPE: 0.0580, RMSE: 4.21
-Horizon 02, MAE: 2.63, MAPE: 0.0640, RMSE: 4.77
-Horizon 03, MAE: 2.80, MAPE: 0.0693, RMSE: 5.22
-Horizon 04, MAE: 2.96, MAPE: 0.0742, RMSE: 5.62
-Horizon 05, MAE: 3.10, MAPE: 0.0787, RMSE: 5.98
-Horizon 06, MAE: 3.23, MAPE: 0.0830, RMSE: 6.31
-Horizon 07, MAE: 3.36, MAPE: 0.0871, RMSE: 6.61
-Horizon 08, MAE: 3.49, MAPE: 0.0910, RMSE: 6.90
-Horizon 09, MAE: 3.61, MAPE: 0.0949, RMSE: 7.18
-Horizon 10, MAE: 3.73, MAPE: 0.0986, RMSE: 7.44
-Horizon 11, MAE: 3.85, MAPE: 0.1022, RMSE: 7.69
-Horizon 12, MAE: 3.96, MAPE: 0.1057, RMSE: 7.92
+Horizon 01, MAE: 2.21, MAPE: 0.0526, RMSE: 3.80
+Horizon 02, MAE: 2.36, MAPE: 0.0575, RMSE: 4.24
+Horizon 03, MAE: 2.48, MAPE: 0.0616, RMSE: 4.59
+Horizon 04, MAE: 2.58, MAPE: 0.0652, RMSE: 4.88
+Horizon 05, MAE: 2.67, MAPE: 0.0684, RMSE: 5.14
+Horizon 06, MAE: 2.74, MAPE: 0.0714, RMSE: 5.36
+Horizon 07, MAE: 2.82, MAPE: 0.0741, RMSE: 5.56
+Horizon 08, MAE: 2.88, MAPE: 0.0766, RMSE: 5.74
+Horizon 09, MAE: 2.94, MAPE: 0.0789, RMSE: 5.90
+Horizon 10, MAE: 3.00, MAPE: 0.0811, RMSE: 6.05
+Horizon 11, MAE: 3.05, MAPE: 0.0832, RMSE: 6.19
+Horizon 12, MAE: 3.10, MAPE: 0.0852, RMSE: 6.32
 ```
 
